@@ -1,0 +1,1 @@
+/System/Volumes/Data/Users/yutaro/Library/Preferences/atcoder-cli-nodejs/cpp/main.cpp
