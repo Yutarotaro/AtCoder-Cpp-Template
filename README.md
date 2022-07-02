@@ -1,4 +1,7 @@
 # AtCoder-Cpp-Template
+
+https://atcoder.jp/users/bored_funuke
+
 ## 便利なテンプレ
 
 ```cpp
