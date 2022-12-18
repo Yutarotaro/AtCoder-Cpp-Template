@@ -38,17 +38,33 @@ template <typename T> T gcd(T a, T b) {
     return a;
   return gcd(b, a % b);
 }
+
+//output
 template <class t> using vc = vector<t>;
 template <class t> ostream &operator<<(ostream &os, const vc<t> &v) {
   os << "{";
   for (auto e : v)
+    os << e << " ";
+  return os << "}";
+}
+template <class t> ostream &operator<<(ostream &os, const set<t> &st) {
+  os << "{";
+  for (auto e : st)
     os << e << ",";
   return os << "}";
 }
+template <class t, class u> ostream &operator<<(ostream &os, const map<t,u> &mp) {
+  for (auto [k, v] : mp)
+    os << k << " " << v << endl;
+  return os;
+}
+
 template <class t, class u>
 ostream &operator<<(ostream &os, const pair<t, u> &p) {
-  return os << "{" << p.first << "," << p.second << "}";
+  return os << "{" << p.first << " " << p.second << "}";
 }
+
+//input
 template <typename T, typename U>
 std::istream &operator>>(std::istream &is, pair<T, U> &pair) {
   return is >> pair.first >> pair.second;
@@ -68,6 +84,7 @@ std::istream &operator>>(std::istream &is, vector<T> &vec) {
     is >> x;
   return is;
 }
+
 template <class T> T extgcd(T a, T b, T &x, T &y) {
   T d = a;
   if (b == 0) {
